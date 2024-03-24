@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: metrics-producer
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          -metrics
+
+metrics:
+  kafka:
+    topic: metrics-topic
+    bootstrap:
+      config: "localhost:9092"

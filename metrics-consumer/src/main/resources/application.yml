@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: metrics-consumer
+  datasource:
+    url: jdbc:postgresql://localhost:5433/devdb
+    username: devuser
+    password: devpassword
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 8081
+metrics:
+  kafka:
+    bootstrap:
+      config: "localhost:9092"
+    consumer:
+      group-id: "metric"
